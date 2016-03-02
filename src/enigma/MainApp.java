@@ -1,5 +1,12 @@
 package enigma;
 
+/*
+ * Small Enigma application
+ * JavaFX MVC
+ * 
+ * @author Paweł Czernek
+ */
+
 import java.io.IOException;
 
 import enigma.view.EnigmaViewController;
