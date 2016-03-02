@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="enigma.view.EnigmaViewController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleOpenFile" text="Open File." />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSaveFile" text="Save File." />
+                  <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="371.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+            <SplitPane dividerPositions="0.5" prefHeight="311.0" prefWidth="600.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                  <TextArea fx:id="plainTextArea" layoutX="2.0" layoutY="2.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                  <TextArea fx:id="encryptedTextArea" layoutX="2.0" layoutY="2.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+      <Button layoutX="500.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleEncrypt" text="Encode text" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="11.0" />
+      <Button layoutX="14.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleLoadRotors" text="Load rotors" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="5.0" />
+      <Button layoutX="108.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleLoadInit" text="Set init position" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0" />
+   </children>
+</AnchorPane>
+   </center>
+</BorderPane>
